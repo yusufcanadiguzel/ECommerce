@@ -361,3 +361,89 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+## BUILD OUTPUT
+bin/
+obj/
+out/
+artifacts/
+
+## USER SPECIFIC
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## VISUAL STUDIO
+.vs/
+.vscode/
+*.code-workspace
+
+## RESHARPER / RIDER
+.idea/
+*.DotSettings.user
+_ReSharper.Caches/
+
+## DLL / PACKAGE CACHES
+*.dll
+*.pdb
+*.mdb
+*.cache
+*.config
+*.dbmdl
+*.jfm
+packages/
+*.nupkg
+
+## EF MIGRATIONS BUILD CACHE
+**/Migrations/**/Snapshot*
+
+## DOTNET TOOLS
+.dotnet-tools/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+## LOGS & TEMP
+logs/
+*.log
+*.tld
+*.tmp
+*.temp
+*.bak
+
+## SECRETS
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+
+## PUBLISH / DEPLOY OUTPUT
+publish/
+wwwroot/
+node_modules/
+
+## DOCKER
+docker-compose.override.yml
+**/Dockerfile.*
+
+## TEST RESULTS
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+## OS SPECIFIC
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
