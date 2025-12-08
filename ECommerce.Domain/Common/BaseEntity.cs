@@ -1,8 +1,8 @@
 ﻿namespace ECommerce.Domain.Common;
 
-public abstract class BaseEntity
+public abstract class BaseEntity<TId>
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime? UpdatedAt { get; set; }
+    public TId Id { get; protected set; } = default!;
+    public DateTime CreatedAt { get; protected set; } = DateTime.UtcNow;
+    public DateTime? UpdatedAt { get; protected set; }
 }

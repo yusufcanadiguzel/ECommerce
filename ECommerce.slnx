@@ -1,1 +1,16 @@
-<Solution />
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="architecture.md" />
+    <File Path="runbook.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="ECommerce.Api/ECommerce.Api.csproj" />
+    <Project Path="ECommerce.Application/ECommerce.Application.csproj" />
+    <Project Path="ECommerce.Domain/ECommerce.Domain.csproj" />
+    <Project Path="ECommerce.Infrastructure/ECommerce.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="ECommerce.Tests.Integration/ECommerce.Tests.Integration.csproj" />
+    <Project Path="ECommerce.Tests.Unit/ECommerce.Tests.Unit.csproj" />
+  </Folder>
+</Solution>
