@@ -1,10 +1,11 @@
-﻿using ECommerce.Infrastructure.Persistance.Context;
+﻿using ECommerce.Infrastructure.Common;
+using ECommerce.Infrastructure.Persistance.Context;
 using ECommerce.Infrastructure.Persistance.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ECommerce.Infrastructure.Common;
+namespace ECommerce.Infrastructure;
 
 public static class DependencyInjection
 {

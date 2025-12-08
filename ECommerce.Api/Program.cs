@@ -1,3 +1,4 @@
+using ECommerce.Api.Middlewares;
 using ECommerce.Application;
 using ECommerce.Infrastructure;
 
@@ -14,6 +15,9 @@ builder.Services.AddApplicationDependencies();
 builder.Services.AddInfrastructureDependencies(builder.Configuration);
 
 var app = builder.Build();
+
+// Global Exception Middleware
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

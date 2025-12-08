@@ -1,8 +1,14 @@
 # Layers
-Project Layers
+Domain Layer
+Infrastructure Layer
+Application Layer
+API Layer
 
 # Dependencies
-Project Dependencies
+Domain: No Dependencies
+Infrastructure: Domain
+Application: Domain, Infrastructure
+API: Domain, Infrastructure, Application
 
 # Folder Structure
 Project Folder Structure
