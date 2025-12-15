@@ -1,10 +1,9 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using ECommerce.Api.DependencyInjection;
-using ECommerce.Api.Extensions;
 using ECommerce.Api.Middlewares;
-using ECommerce.Application.DependencyInjection.DependencyInjection;
-using ECommerce.Infrastructure.DependencyInjection.DependencyInjection;
+using ECommerce.Application.DependencyInjection;
+using ECommerce.Infrastructure.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,11 +13,8 @@ builder.Host
     {
         containerBuilder.RegisterModule(new ApiModule());
         containerBuilder.RegisterModule(new ApplicationModule());
-        containerBuilder.RegisterModule(new InfrastructureModule());
+        containerBuilder.RegisterModule(new InfrastructureModule(builder.Configuration));
     });
-
-// Database Connection
-builder.Services.ConfigureDatabaseConnection(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

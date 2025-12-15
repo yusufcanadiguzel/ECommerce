@@ -1,4 +1,4 @@
-﻿namespace ECommerce.Infrastructure.Common.Interfaces;
+﻿namespace ECommerce.Application.Common.Interfaces;
 
 public interface IQueryHandler<TQuery, TResult>
 {
