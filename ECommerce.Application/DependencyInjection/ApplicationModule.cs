@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using ECommerce.Application.Common.Interfaces;
 
 namespace ECommerce.Application.DependencyInjection;
 
@@ -8,11 +9,14 @@ public class ApplicationModule : Module
     {
         var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
-        // Command and Query Handler Registrations
+        // Command Handler Registration
         builder.RegisterAssemblyTypes(assembly)
-            .Where(x => x.Name.EndsWith("CommandHandler") 
-                     || x.Name.EndsWith("QueryHandler"))
-            .AsImplementedInterfaces()
+            .AsClosedTypesOf(typeof(ICommandHandler<>))
+            .InstancePerLifetimeScope();
+
+        // Query Handler Registration
+        builder.RegisterAssemblyTypes(assembly)
+            .AsClosedTypesOf(typeof(IQueryHandler<,>))
             .InstancePerLifetimeScope();
 
         base.Load(builder);

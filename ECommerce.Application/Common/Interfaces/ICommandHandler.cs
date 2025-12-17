@@ -1,6 +1,7 @@
 ﻿namespace ECommerce.Application.Common.Interfaces;
 
-public interface ICommandHandler<TCommand, TResult>
+public interface ICommandHandler<in TCommand>
+    where TCommand : ICommand
 {
-    Task<TResult> Handle(TCommand command, CancellationToken cancellationToken);
+    Task Handle(TCommand command, CancellationToken cancellationToken);
 }
